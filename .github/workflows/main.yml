@@ -16,13 +16,14 @@ jobs:
         name: Checkout
         with:
           fetch-depth: 0
+          token: ${{secrets.GIT_TOKEN}}
       - name: Set local git settings
         run: |
           git config --local user.email "${{ secrets.GIT_EMAIL }}"
           git config --local user.name "${{ secrets.GIT_NAME }}"
           git config --local user.signingkey "${{ secrets.GIT_GPG }}"
           git config --local commit.gpgsign true
-          git remote set-url origin "https://${{secrets.GIT_NAME}}:${{secrets.GIT_TOKEN}}@github.com/$GITHUB_REPOSITORY"
+          git remote set-url origin "https://github.com/$GITHUB_REPOSITORY"
       - name: Bump and publish
         run: |
           yarn release
@@ -35,10 +36,6 @@ jobs:
       image: ubuntu:latest
     if: "contains(github.event.head_commit.message, 'chore(release)')"
     steps:
-      - uses: actions/checkout@v2
-        name: Checkout
-        with:
-          fetch-depth: 0
       - name: Get package info
         id: package
         uses: codex-team/action-nodejs-package-info@v1
