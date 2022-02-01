@@ -5,15 +5,53 @@ on:
     branches: [main]
 
 jobs:
-  beatrice-test:
+  checkout:
+    name: Checkout
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.3.0
-        name: Install dependencies
+
+  version:
+    name: Version
+    runs-on: ubuntu-latest
+    needs: [checkout]
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
+    steps:
+      - name: Set local git settings
+        run: |
+          git config --local user.email "${{ secrets.GIT_EMAIL }}"
+          git config --local user.name "${{ secrets.GIT_NAME }}"
+          git config --local user.signingkey "${{ secrets.GIT_GPG }}"
+          git config --local commit.gpgsign true
+          git remote set-url origin "https://${{secrets.GIT_NAME}}:${{secrets.GIT_TOKEN}}@github.com/$GITHUB_REPOSITORY"
+      - name: Bump and publish
+        run: |
+          yarn release
+          git push --follow-tags origin main
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    needs: [checkout]
+    if: "contains(github.event.head_commit.message, 'chore(release)')"
+    steps:
+      - name: Get package info
+        id: package
+        uses: codex-team/action-nodejs-package-info@v1
+      - name: Set image tag
+        id: tag
+        run: |
+          echo "::set-output name=bare::${{ secrets.DOCKER_REGISTRY }}/${{ secrets.DOCKER_REPOSITORY }}"
+          echo "::set-output name=semver::${{ secrets.DOCKER_REGISTRY }}/${{ secrets.DOCKER_REPOSITORY }}:${{ steps.package.outputs.version }}"
+          echo "::set-output name=latest::${{ secrets.DOCKER_REGISTRY }}/${{ secrets.DOCKER_REPOSITORY }}:latest"
+      - uses: docker/login-action@v1
+        name: Login to docker registry
         with:
-          cmd: install
-      - uses: borales/actions-yarn@v2.3.0
-        name: Build
-        with:
-          cmd: build
+          registry: ${{ secrets.DOCKER_REGISTRY }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      - name: Build docker image
+        run: docker build -t ${{ steps.tag.outputs.latest }} -t ${{ steps.tag.outputs.semver }} .
+      - name: Push docker image
+        run: docker push ${{ steps.tag.outputs.bare }} --all-tags
+
