@@ -20,7 +20,7 @@ jobs:
     needs: [checkout]
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
     steps:
-      - uses: olafurpg/setup-gpg@v3
+      - run: which gpg
       - name: Set local git settings
         run: |
           git config --local user.email "${{ secrets.GIT_EMAIL }}"
