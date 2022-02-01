@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.10](https://github.com/eyzi/website/compare/v0.1.9...v0.1.10) (2022-02-01)
+
+
+### Features
+
+* **links:** add steam link ([1d93553](https://github.com/eyzi/website/commit/1d93553f4336f6f90fa986e0a7dbe5a9c540a018))
+
 ### [0.1.9](https://github.com/eyzi/website/compare/v0.1.8...v0.1.9) (2022-02-01)
 
 ### [0.1.8](https://github.com/eyzi/website/compare/v0.1.7...v0.1.8) (2022-02-01)
