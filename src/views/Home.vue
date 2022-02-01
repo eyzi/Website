@@ -81,7 +81,13 @@ export default defineComponent({
         label: "Twitter",
         url: "https://twitter.com/TheEyzi",
         image:
-          "https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter_colored_svg-512.png",
+          "https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter2_colored_svg-512.png",
+      },
+      {
+        label: "Steam",
+        url: "https://steamcommunity.com/id/TheEyzi/",
+        image:
+          "https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_steam-512.png",
       },
       {
         label: "Blogsite",
