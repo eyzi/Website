@@ -3,12 +3,14 @@
     <div>
       <div class="columns">
         <div class="left">
-          <img
-            class="full-avatar"
-            title="Avatar by @riotsuji041224"
-            src="https://cdn.eyzi.dev/avatar-full.png"
-          />
+          <img class="full-avatar" src="https://cdn.eyzi.dev/avatar-full.png" />
           <img class="min-avatar" src="https://cdn.eyzi.dev/avatar.png" />
+          <div class="credit">
+            Art by
+            <a href="https://twitter.com/riotsuji041224" target="_blank"
+              >@riotsuji041224</a
+            >
+          </div>
         </div>
 
         <div class="right">
@@ -37,14 +39,11 @@
             for my home servers, and do IoT and game development, and DevOps.
             <br /><br />
             Creative Lead at
-            <img
-              class="moonlit-icon"
-              src="https://cdn.moonlit.works/logo/image.png"
-            /><a
-              class="moonlit-link"
-              href="https://moonlit.works"
-              target="_blank"
-              >Moonlit Works</a
+            <a class="moonlit-link" href="https://moonlit.works" target="_blank"
+              ><img
+                class="moonlit-icon"
+                src="https://cdn.moonlit.works/logo/image.png"
+              />Moonlit Works</a
             >
           </div>
         </div>
@@ -52,7 +51,10 @@
 
       <div id="contact">
         Need something? Reach me by email at
-        <span class="eyzi-color">contact@eyzi.dev</span> or on Discord at
+        <a href="mailto:contact@eyzi.dev"
+          ><span class="eyzi-color">contact@eyzi.dev</span></a
+        >
+        or on Discord at
         <span class="eyzi-color">Eyzi#3994</span>
       </div>
 
@@ -101,6 +103,12 @@ export default defineComponent({
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
+a,
+a:link,
+a:hover {
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 600px) {
   .full-avatar {
     display: none;
@@ -117,6 +125,10 @@ export default defineComponent({
   .left,
   .right {
     text-align: center;
+  }
+
+  #header {
+    padding-top: 1em;
   }
 }
 
@@ -160,13 +172,19 @@ export default defineComponent({
   align-items: center;
 }
 
+.credit {
+  text-align: center;
+  font-family: var(--text-font2);
+  font-size: 0.8em;
+}
+
 .title-header {
   font-size: 3em;
-  font-family: "Indie Flower", cursive;
+  font-family: var(--text-font);
 }
 
 .eyzi-color {
-  color: #ff4d4d;
+  color: var(--eyzi-color);
 }
 
 #links {
@@ -178,6 +196,7 @@ export default defineComponent({
 #info {
   padding: 1em;
   text-align: center;
+  font-family: var(--text-font2);
 }
 
 .moonlit-icon {
@@ -187,14 +206,17 @@ export default defineComponent({
 
 .moonlit-link {
   text-decoration: none;
-  color: #caa915;
+  color: var(--moonlit-color);
 }
 
 #contact {
   margin: 2em;
+  font-family: var(--text-font2);
 }
 
 #footer {
   font-size: 0.7em;
+  padding-bottom: 1em;
+  font-family: var(--text-font2);
 }
 </style>
