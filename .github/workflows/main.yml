@@ -7,7 +7,7 @@ on:
 jobs:
   checkout:
     name: Checkout
-    runs-on: ubuntu-latest
+    runs-on: ubuntu:latest
     steps:
       - uses: actions/checkout@v2
         name: Checkout
@@ -16,7 +16,7 @@ jobs:
 
   version:
     name: Version
-    runs-on: ubuntu-latest
+    runs-on: ubuntu:latest
     needs: [checkout]
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
     steps:
@@ -34,7 +34,7 @@ jobs:
 
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu:latest
     needs: [checkout]
     if: "contains(github.event.head_commit.message, 'chore(release)')"
     steps:
