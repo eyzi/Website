@@ -14,6 +14,6 @@ jobs:
         with:
           cmd: install
       - uses: borales/actions-yarn@v2.3.0
-        name: Install dependencies
+        name: Build
         with:
           cmd: build
