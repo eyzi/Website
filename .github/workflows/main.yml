@@ -5,25 +5,17 @@ on:
     branches: [main]
 
 jobs:
-  checkout:
-    name: Checkout
-    runs-on: ubuntu-latest
-    container:
-      image: ubuntu:latest
-    steps:
-      - uses: actions/checkout@v2
-        name: Checkout
-        with:
-          fetch-depth: 0
-
   version:
     name: Version
     runs-on: ubuntu-latest
     container:
       image: ubuntu:latest
-    needs: [checkout]
     if: "!contains(github.event.head_commit.message, 'chore(release)')"
     steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          fetch-depth: 0
       - name: Set local git settings
         run: |
           git config --local user.email "${{ secrets.GIT_EMAIL }}"
@@ -41,9 +33,12 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ubuntu:latest
-    needs: [checkout]
     if: "contains(github.event.head_commit.message, 'chore(release)')"
     steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          fetch-depth: 0
       - name: Get package info
         id: package
         uses: codex-team/action-nodejs-package-info@v1
@@ -63,4 +58,3 @@ jobs:
         run: docker build -t ${{ steps.tag.outputs.latest }} -t ${{ steps.tag.outputs.semver }} .
       - name: Push docker image
         run: docker push ${{ steps.tag.outputs.bare }} --all-tags
-
