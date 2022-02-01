@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/eyzi/website/compare/v0.1.3...v0.1.4) (2022-02-01)
+
+
+### Features
+
+* **page:** add health endpoint ([512ad8d](https://github.com/eyzi/website/commit/512ad8df9969c29de67bc84356674647c2e0339c))
+
 ### [0.1.3](https://github.com/eyzi/website/compare/v0.1.2...v0.1.3) (2022-02-01)
 
 
