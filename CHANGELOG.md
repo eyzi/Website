@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/eyzi/website/compare/v0.1.5...v0.1.6) (2022-02-01)
+
+
+### Features
+
+* **page:** add license, text font, and avatar credit ([96e254e](https://github.com/eyzi/website/commit/96e254ef9b3c43268b4b4b75379d050f4f98a2e7))
+
 ### [0.1.5](https://github.com/eyzi/website/compare/v0.1.4...v0.1.5) (2022-02-01)
 
 
