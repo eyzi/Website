@@ -25,6 +25,7 @@ jobs:
           git config --local user.email "${{ secrets.GIT_EMAIL }}"
           git config --local user.name "${{ secrets.GIT_NAME }}"
           git config --local user.signingkey "${{ secrets.GIT_GPG }}"
+          git config --local gpg.program /usr/bin/gpg
           git config --local commit.gpgsign true
           git remote set-url origin "https://${{secrets.GIT_NAME}}:${{secrets.GIT_TOKEN}}@github.com/$GITHUB_REPOSITORY"
       - uses: borales/actions-yarn@v2.3.0
