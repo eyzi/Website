@@ -1,58 +1,63 @@
 <template>
   <div class="home">
-    <div class="columns">
-      <div class="left">
-        <img
-          class="full-avatar"
-          title="Avatar by @riotsuji041224"
-          src="https://cdn.eyzi.dev/avatar-full.png"
-        />
-        <img class="min-avatar" src="https://cdn.eyzi.dev/avatar.png" />
-      </div>
-
-      <div class="right">
-        <div id="header">
-          <span class="title-header eyzi-color">Eyzi</span>
-        </div>
-        <div id="links">
-          <Link
-            v-for="link in links"
-            :key="link.label"
-            :label="link.label"
-            :url="link.url"
-            :image="link.image"
-          />
-        </div>
-
-        <div id="info">
-          Hello! I am a software developer both by trade and hobby.
-          <br /><br />
-          Professionally, I have developed full-stack web and desktop
-          applications for various industries such as sales, telecommunication,
-          broadcasting, and online banking.
-          <br /><br />
-          Personally, I dabble in both hardware and software technologies and
-          practices. I manage networking, system, and database administration
-          for my home servers, and do IoT and game development, and DevOps.
-          <br /><br />
-          Creative Lead at
+    <div>
+      <div class="columns">
+        <div class="left">
           <img
-            class="moonlit-icon"
-            src="https://cdn.moonlit.works/logo/image.png"
-          /><a class="moonlit-link" href="https://moonlit.works" target="_blank"
-            >Moonlit Works</a
-          >
+            class="full-avatar"
+            title="Avatar by @riotsuji041224"
+            src="https://cdn.eyzi.dev/avatar-full.png"
+          />
+          <img class="min-avatar" src="https://cdn.eyzi.dev/avatar.png" />
+        </div>
+
+        <div class="right">
+          <div id="header">
+            <span class="title-header eyzi-color">Eyzi</span>
+          </div>
+          <div id="links">
+            <Link
+              v-for="link in links"
+              :key="link.label"
+              :label="link.label"
+              :url="link.url"
+              :image="link.image"
+            />
+          </div>
+
+          <div id="info">
+            Hello! I am a software developer both by trade and hobby.
+            <br /><br />
+            Professionally, I have developed full-stack web and desktop
+            applications for various industries such as sales,
+            telecommunication, broadcasting, and online banking.
+            <br /><br />
+            Personally, I dabble in both hardware and software technologies and
+            practices. I manage networking, system, and database administration
+            for my home servers, and do IoT and game development, and DevOps.
+            <br /><br />
+            Creative Lead at
+            <img
+              class="moonlit-icon"
+              src="https://cdn.moonlit.works/logo/image.png"
+            /><a
+              class="moonlit-link"
+              href="https://moonlit.works"
+              target="_blank"
+              >Moonlit Works</a
+            >
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="contact">
-      Need something? Reach me by email at
-      <span class="eyzi-color">contact@eyzi.dev</span> or on Discord at
-      <span class="eyzi-color">Eyzi#3994</span>
-    </div>
+      <div id="contact">
+        Need something? Reach me by email at
+        <span class="eyzi-color">contact@eyzi.dev</span> or on Discord at
+        <span class="eyzi-color">Eyzi#3994</span>
+      </div>
 
-    <div id="footer">Eyzi &copy; {{ new Date().getFullYear() }}</div>
+      <div id="footer">Eyzi &copy; {{ new Date().getFullYear() }}</div>
+    </div>
   </div>
 </template>
 
@@ -145,6 +150,14 @@ export default defineComponent({
     width: 10em;
     text-align: center;
   }
+}
+
+.home {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title-header {
