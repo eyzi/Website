@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.11](https://github.com/eyzi/website/compare/v0.1.10...v0.1.11) (2022-02-05)
+
+
+### Bug Fixes
+
+* **page:** open links in the same tab ([c7d608b](https://github.com/eyzi/website/commit/c7d608be676f5460129ff0bb75923b41d21448d3))
+
 ### [0.1.10](https://github.com/eyzi/website/compare/v0.1.9...v0.1.10) (2022-02-01)
 
 
