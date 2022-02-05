@@ -1,6 +1,6 @@
 <template>
   <span class="link-box">
-    <a class="link" :href="url" target="_blank" :title="label">
+    <a class="link" :href="url" :title="label">
       <img class="link-image" :src="image" />
     </a>
   </span>

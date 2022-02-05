@@ -7,9 +7,7 @@
           <img class="min-avatar" src="https://cdn.eyzi.dev/avatar.png" />
           <div class="credit">
             Art by
-            <a href="https://twitter.com/riotsuji041224" target="_blank"
-              >@riotsuji041224</a
-            >
+            <a href="https://twitter.com/riotsuji041224">@riotsuji041224</a>
           </div>
         </div>
 
@@ -39,7 +37,7 @@
             for my home servers, and do IoT and game development, and DevOps.
             <br /><br />
             Creative Lead at
-            <a class="moonlit-link" href="https://moonlit.works" target="_blank"
+            <a class="moonlit-link" href="https://moonlit.works"
               ><img
                 class="moonlit-icon"
                 src="https://cdn.moonlit.works/logo/image.png"
