@@ -26,7 +26,7 @@
           </div>
 
           <div id="info">
-            Hello! I am a software developer both by trade and hobby.
+            Hello! I am a software developer and writer.
             <br /><br />
             Professionally, I have developed full-stack web and desktop
             applications for various industries such as sales,
