@@ -7,7 +7,7 @@
           <img class="min-avatar" src="https://cdn.eyzi.dev/avatar.png" />
           <div class="credit">
             Art by
-            <a href="https://twitter.com/riotsuji041224">@riotsuji041224</a>
+            <a href="https://twitter.com/riotsuji041224">@riotsuji</a>
           </div>
         </div>
 
