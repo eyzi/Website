@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.15](https://github.com/eyzi/website/compare/v0.1.14...v0.1.15) (2022-02-16)
+
+
+### Features
+
+* **manifest:** add vue config file ([b384f4b](https://github.com/eyzi/website/commit/b384f4be8ad5b5cdaefd9488d1bc8265acf42244))
+
 ### [0.1.14](https://github.com/eyzi/website/compare/v0.1.13...v0.1.14) (2022-02-15)
 
 ### [0.1.13](https://github.com/eyzi/website/compare/v0.1.12...v0.1.13) (2022-02-06)
