@@ -15,6 +15,9 @@
           <div id="header">
             <span class="title-header eyzi-color">Eyzi</span>
           </div>
+
+          <div id="info">/eɪzi/</div>
+
           <div id="links">
             <Link
               v-for="link in links"
