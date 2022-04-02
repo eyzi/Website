@@ -16,7 +16,10 @@
             <span class="title-header eyzi-color">Eyzi</span>
           </div>
 
-          <div id="info">/eɪzi/</div>
+          <div id="definition">
+            <span id="phonetic">/eɪzi/</span>
+            <span id="pos"> (noun)</span>
+          </div>
 
           <div id="links">
             <Link
@@ -109,6 +112,7 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=Source+Sans+Pro&display=swap");
 
 a,
 a:link,
@@ -198,6 +202,20 @@ a:hover {
   padding: 1em;
   margin: auto;
   text-align: center;
+}
+
+#definition {
+  font-family: "Times New Roman";
+  padding: 1em;
+  text-align: center;
+
+  #phonetic {
+    letter-spacing: 0.1em;
+  }
+
+  #pos {
+    font-style: italic;
+  }
 }
 
 #info {
