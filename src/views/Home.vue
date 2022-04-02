@@ -17,7 +17,7 @@
           </div>
 
           <div id="definition">
-            <span id="phonetic">/eɪzi/</span>
+            <span id="phonetic" @click="pronounce">/eɪzi/</span>
             <span id="pos"> (noun)</span>
           </div>
 
@@ -101,6 +101,12 @@ export default defineComponent({
       },
     ],
   }),
+  methods: {
+    pronounce() {
+      const audio = new Audio("/audio/pronunciation.mp3");
+      audio.play();
+    },
+  },
   components: {
     Link,
   },
@@ -211,6 +217,7 @@ a:hover {
 
   #phonetic {
     letter-spacing: 0.1em;
+    cursor: pointer;
   }
 
   #pos {
