@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.19](https://github.com/eyzi/website/compare/v0.1.18...v0.1.19) (2022-04-02)
+
+
+### Features
+
+* **home:** style phonetic ([7f5d3f9](https://github.com/eyzi/website/commit/7f5d3f9e3e1725efdcdf1d53886d9b8e84a9d358))
+
 ### [0.1.18](https://github.com/eyzi/website/compare/v0.1.17...v0.1.18) (2022-04-02)
 
 ### [0.1.17](https://github.com/eyzi/website/compare/v0.1.16...v0.1.17) (2022-03-20)
