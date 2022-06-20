@@ -79,25 +79,25 @@ export default defineComponent({
         label: "Github",
         url: "https://github.com/eyzi",
         image:
-          "https://cdn1.iconfinder.com/data/icons/logotypes/32/github-512.png",
+          "https://cdn2.iconfinder.com/data/icons/social-aquiocons/512/Aquicon-Github.png",
       },
       {
         label: "Twitter",
         url: "https://twitter.com/TheEyzi",
         image:
-          "https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter2_colored_svg-512.png",
+          "https://cdn2.iconfinder.com/data/icons/social-aquiocons/512/Aquicon-Twitter.png",
       },
       {
-        label: "Steam",
-        url: "https://steamcommunity.com/id/TheEyzi/",
+        label: "Twitch",
+        url: "https://twitch.tv/eyzi",
         image:
-          "https://cdn3.iconfinder.com/data/icons/social-media-2169/24/social_media_social_media_logo_steam-512.png",
+          "https://cdn2.iconfinder.com/data/icons/social-aquicons/512/Twitch.png",
       },
       {
         label: "Blogsite",
         url: "https://blog.eyzi.dev",
         image:
-          "https://cdn3.iconfinder.com/data/icons/flat-instagram-stories-2/512/Book-512.png",
+          "https://cdn2.iconfinder.com/data/icons/social-aquiocons/512/Aquicon-Blogger.png",
       },
     ],
   }),
@@ -122,8 +122,11 @@ export default defineComponent({
 
 a,
 a:link,
-a:hover {
+a:hover,
+a:visited {
   text-decoration: none;
+  color: var(--eyzi-color);
+  font-family: var(--text-font2);
 }
 
 @media only screen and (max-width: 600px) {
@@ -133,6 +136,8 @@ a:hover {
 
   .min-avatar {
     display: inline-block;
+    width: 250px;
+    margin-top: 30px;
   }
 
   .columns {
@@ -187,6 +192,8 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #161616;
+  color: white;
 }
 
 .credit {

@@ -26,6 +26,6 @@ export default defineComponent({
 }
 
 .link-image {
-  width: 23px;
+  width: 40px;
 }
 </style>
