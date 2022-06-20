@@ -5,10 +5,6 @@
         <div class="left">
           <img class="full-avatar" src="https://cdn.eyzi.dev/avatar-full.png" />
           <img class="min-avatar" src="https://cdn.eyzi.dev/avatar.png" />
-          <div class="credit">
-            Art by
-            <a href="https://twitter.com/riotsuji041224">@riotsuji</a>
-          </div>
         </div>
 
         <div class="right">
@@ -62,7 +58,21 @@
         <span class="eyzi-color">Eyzi#3994</span>
       </div>
 
-      <div id="footer">Eyzi &copy; {{ new Date().getFullYear() }}</div>
+      <div id="footer">
+        <div>Eyzi &copy; {{ new Date().getFullYear() }}</div>
+        <div>
+          Avatar by
+          <a href="https://twitter.com/riotsuji041224" target="_blank">
+            Riotsuji
+          </a>
+        </div>
+        <div>
+          Social media icons by
+          <a href="https://www.iconfinder.com/jessicalanan" target="_blank">
+            Lanan Illustration
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -194,12 +204,6 @@ a:visited {
   align-items: center;
   background-color: #161616;
   color: white;
-}
-
-.credit {
-  text-align: center;
-  font-family: var(--text-font2);
-  font-size: 0.8em;
 }
 
 .title-header {
