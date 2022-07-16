@@ -202,7 +202,7 @@ a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #161616;
+  background-color: #131313;
   color: white;
 }
 
