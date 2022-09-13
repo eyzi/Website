@@ -62,9 +62,7 @@
         <div>Eyzi &copy; {{ new Date().getFullYear() }}</div>
         <div>
           Avatar by
-          <a href="https://twitter.com/riotsuji041224" target="_blank">
-            Riotsuji
-          </a>
+          <a href="https://twitter.com/riotsuji" target="_blank">Riotsuji</a>
         </div>
         <div>
           Social media icons by
