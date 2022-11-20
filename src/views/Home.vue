@@ -28,15 +28,9 @@
           </div>
 
           <div id="info">
-            Hello! I am a software developer by trade and hobby.
-            <br /><br />
-            Professionally, I have developed full-stack web and desktop
-            applications for various industries such as sales,
-            telecommunication, broadcasting, and online banking.
-            <br /><br />
-            Personally, I dabble in both hardware and software technologies and
-            practices. I manage networking, system, and database administration
-            for my home servers, and do IoT and game development, and DevOps.
+            Check my github for bad codes
+            <br />
+            Check my blog for bad takes
             <br /><br />
             Creative Lead at
             <a class="moonlit-link" href="https://moonlit.works"
@@ -45,17 +39,15 @@
                 src="https://cdn.moonlit.works/logo/image.png"
               />Moonlit Works</a
             >
+            <br /><br />
+            Reach me by email at
+            <a href="mailto:contact@eyzi.dev"
+              ><span class="eyzi-color">contact@eyzi.dev</span></a
+            >
+            or on Discord at
+            <span class="eyzi-color">Eyzi#3994</span>
           </div>
         </div>
-      </div>
-
-      <div id="contact">
-        Need something? Reach me by email at
-        <a href="mailto:contact@eyzi.dev"
-          ><span class="eyzi-color">contact@eyzi.dev</span></a
-        >
-        or on Discord at
-        <span class="eyzi-color">Eyzi#3994</span>
       </div>
 
       <div id="footer">
@@ -88,18 +80,6 @@ export default defineComponent({
         url: "https://github.com/eyzi",
         image:
           "https://cdn2.iconfinder.com/data/icons/social-aquiocons/512/Aquicon-Github.png",
-      },
-      {
-        label: "Twitter",
-        url: "https://twitter.com/TheEyzi",
-        image:
-          "https://cdn2.iconfinder.com/data/icons/social-aquiocons/512/Aquicon-Twitter.png",
-      },
-      {
-        label: "Twitch",
-        url: "https://twitch.tv/eyzi",
-        image:
-          "https://cdn2.iconfinder.com/data/icons/social-aquicons/512/Twitch.png",
       },
       {
         label: "Blogsite",
