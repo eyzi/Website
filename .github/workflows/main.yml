@@ -5,21 +5,19 @@ on:
     branches: [main]
 
 jobs:
-  checkout:
-    name: Checkout
+  version:
+    name: Version
     runs-on: self-hosted
+    if: "!contains(github.event.head_commit.message, 'chore(release)')"
     steps:
       - uses: actions/checkout@v2
         name: Checkout
         with:
+          token: ${{ secrets.GIT_TOKEN }}
           fetch-depth: 0
-
-  version:
-    name: Version
-    runs-on: self-hosted
-    needs: [checkout]
-    if: "!contains(github.event.head_commit.message, 'chore(release)')"
-    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
       - name: Import GPG Key
         uses: crazy-max/ghaction-import-gpg@v4
         with:
@@ -31,18 +29,23 @@ jobs:
           git_commit_gpgsign: true
           git_tag_gpgsign: true
       - name: Publish
+        env:
+          GITHUB_TOKEN: ${{secrets.GIT_TOKEN}}
         run: |
           git config --local gpg.program $(which gpg)
-          git remote set-url origin "https://${{secrets.GIT_NAME}}:${{secrets.GIT_TOKEN}}@github.com/$GITHUB_REPOSITORY"
-          yarn release
+          npm run release
           git push --follow-tags origin ${{github.ref_name}}
 
   build:
     name: Build
     runs-on: self-hosted
-    needs: [checkout]
     if: "contains(github.event.head_commit.message, 'chore(release)')"
     steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GIT_TOKEN }}
       - name: Get package info
         id: package
         uses: codex-team/action-nodejs-package-info@v1
@@ -62,3 +65,10 @@ jobs:
         run: docker build . -t ${{steps.tags.outputs.latest}} -t ${{steps.tags.outputs.semver}}
       - name: Push docker image
         run: docker push ${{steps.tags.outputs.bare}} --all-tags
+      - name: Update deployment image
+        uses: eyzi/k8s-deploy@v1
+        with:
+          api_url:    ${{ secrets.DEPLOY_URL }}
+          api_token:  ${{ secrets.DEPLOY_TOKEN }}
+          image:      ${{ steps.tags.outputs.bare }}
+          version:    ${{ steps.package.outputs.version }}
