@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.27](https://github.com/eyzi/website/compare/v0.1.26...v0.1.27) (2023-02-10)
+
+
+### Features
+
+* **home:** add name def ([63b0853](https://github.com/eyzi/website/commit/63b0853db3b0e264722379ac9ec0a1047ed432e2))
+
 ### [0.1.26](https://github.com/eyzi/website/compare/v0.1.25...v0.1.26) (2022-11-20)
 
 ### [0.1.25](https://github.com/eyzi/website/compare/v0.1.24...v0.1.25) (2022-09-13)
