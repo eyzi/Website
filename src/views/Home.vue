@@ -14,7 +14,8 @@
 
           <div id="definition">
             <span id="phonetic" @click="pronounce">/eɪzi/</span>
-            <span id="pos"> (noun)</span>
+            <br />
+            <span id="pos">(noun)</span> <span>Lazy without L</span>
           </div>
 
           <div id="links">
